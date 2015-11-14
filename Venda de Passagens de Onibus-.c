@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
  
 int main()
 {
@@ -39,10 +38,6 @@ int main()
             a[l][c] = qtd;
         }
     }
-    struct tm *DataAtual; 
-    time_t Segundos;
-    time(&Segundos);
-    DataAtual = localtime(&Segundos); 
     while (menu!=6){
         printf("\n        GUANAMBI TRANSPORTES");
         printf("\n      TELEFONE: 077 9 3333 3333");
@@ -91,10 +86,6 @@ int main()
                         printf("\nValor: R$130,00");                  
                         printf("\nAssento: ");
                         scanf("%d", &assent1);
-                        if (bus1>48) {
-                        	printf("\nNao ha mais vagas para este onibus.");
-                        	break;
-						}
                         while (assent1>48) {
                             printf("\nEste Onibus possui apenas 48 assentos, por favor, digite um assento valido\n");
                             printf("\nAssento: ");
@@ -117,55 +108,38 @@ int main()
                         if(gratuidade1 < 2){
                             printf("\n3 - Passagem GRATUITA");
                         }
-                        else {
-                        	printf("\n3 - Passagem GRATUITA [LIMITE EXCEDIDO]");
-						}
                         printf("\n");
                         printf("\nDigite o Tipo de Passagem: ");
                         scanf("%d", &pas);
-                        if(gratuidade1 >= 2){
-                        	printf("\nLimite de gratuidades excedido.");
-                        	break;
-						}
                         switch(pas)
                         {
                             case 1:
                                 inte1++;
-                                printf("\n___________________________________________________________");
-                                printf("\n|           Onibus 1 - VIACAO GUANAMBI TURISMO            |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Sao Paulo - SP |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                        |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: R$130,00                                          |");
-                                printf("\n|Tipo de Passagem: INTEIRA                                |");
-                                printf("\n|Assento: %d                                               |", assent1);
-                                printf("\n-----------------------------------------------------------");
+                                printf("\nOnibus 1 - Guanambi BA para Sao Paulo SP");
+                                printf("\nValor: R$130,00");
+                                printf("\nTipo de Passagem: INTEIRA");
+                                printf("\nAssento: %d", assent1);
                                 printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 break;
                             case 2:
                                 meia1++;
-                                printf("\n___________________________________________________________");
-                                printf("\n|           Onibus 1 - VIACAO GUANAMBI TURISMO            |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Sao Paulo - SP |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                        |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: R$65,00                                           |");
-                                printf("\n|Tipo de Passagem: MEIA - ESTUDANTE                       |");
-                                printf("\n|Assento: %d                                               |", assent1);
-                                printf("\n-----------------------------------------------------------");
+                                printf("\nOnibus 1 - Guanambi BA para Sao Paulo SP");
+                                printf("\nValor: R$65,00");
+                                printf("\nAssento: %d", assent1);
+                                printf("\nTipo de Passagem: MEIA - ESTUDANTE");
+                                printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 break;
                             case 3:
                                 grts1++; 
-                                printf("\n___________________________________________________________");
-                                printf("\n|           Onibus 1 - VIACAO GUANAMBI TURISMO            |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Sao Paulo - SP |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                        |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: GRATIS                                            |");
-                                printf("\n|Tipo de Passagem: GRATUIDADE IDOSO                       |");
-                                printf("\n|Assento: %d                                               |", assent1);
-                                printf("\n-----------------------------------------------------------");
+                                printf("\nOnibus 1 - Guanambi BA para Sao Paulo SP");
+                                printf("\nValor: GRATIS");
+                                printf("\nAssento: Preferencial");
+                                printf("\nTipo de Passagem: GRATUIDADE IDOSO");
+                                printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 gratuidade1 ++;
@@ -178,10 +152,6 @@ int main()
                         printf("\nValor: R$110,00");                  
                         printf("\nAssento: ");
                         scanf("%d", &assent2);
-                        if (bus2>48) {
-                        	printf("\nNao ha mais vagas para este onibus.");
-                        	break;
-                        }
                         while (assent2>48) {
                             printf("\nEste Onibus possui apenas 48 assentos, por favor, digite um assento valido\n");
                             printf("\nAssento: ");
@@ -204,55 +174,38 @@ int main()
                         if(gratuidade2 < 2){
                             printf("\n3 - Passagem GRATUITA");
                         }
-                        else {
-                        	printf("\n3 - Passagem GRATUITA [LIMITE EXCEDIDO]");
-						}
                         printf("\n");
                         printf("\nDigite o Tipo de Passagem: ");
                         scanf("%d", &pas);
-                        if(gratuidade2 >= 2){
-                        	printf("\nLimite de gratuidades excedido.");
-                        	break;
-						}
                         switch(pas)
                         {
                             case 1:
                                 inte2++;
-                                printf("\n______________________________________________________________");
-                                printf("\n|           Onibus 2 - VIACAO GUANAMBI TURISMO               |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Belo Horizonte MG |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                           |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: R$110,00                                             |");
-                                printf("\n|Tipo de Passagem: INTEIRA                                   |");
-                                printf("\n|Assento: %d                                                  |", assent2);
-                                printf("\n--------------------------------------------------------------");
+                                printf("\nOnibus 2 - Guanambi BA para Belo Horizonte MG");
+                                printf("\nValor: R$110,00");
+                                printf("\nTipo de Passagem: INTEIRA");
+                                printf("\nAssento: %d", assent2);
                                 printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 break;
                             case 2:
                                 meia2++;
-                                printf("\n______________________________________________________________");
-                                printf("\n|           Onibus 2 - VIACAO GUANAMBI TURISMO               |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Belo Horizonte MG |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                           |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: R$55,00                                              |");
-                                printf("\n|Tipo de Passagem: MEIA                                      |");
-                                printf("\n|Assento: %d                                                  |", assent2);
-                                printf("\n--------------------------------------------------------------");
+                                printf("\nOnibus 2 - Guanambi BA para Belo Horizonte MG");
+                                printf("\nValor: R$55,00");
+                                printf("\nAssento: %d", assent2);
+                                printf("\nTipo de Passagem: MEIA - ESTUDANTE");
+                                printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 break;
                             case 3:
                                 grts2++; 
-                                printf("\n______________________________________________________________");
-                                printf("\n|           Onibus 2 - VIACAO GUANAMBI TURISMO               |");
-                                printf("\n|Embarque: Guanambi - Bahia | Desembarque: Belo Horizonte MG |");
-                                printf("\n|Data: %02d/%02d/%04d | Hora: %02d:%02d:%02d                           |", DataAtual->tm_mday, DataAtual->tm_mon+1, DataAtual->tm_year+1900, DataAtual->tm_hour, DataAtual->tm_min, DataAtual->tm_sec);                                
-                                printf("\n|Valor: GRATIS                                               |");
-                                printf("\n|Tipo de Passagem: GRATUIDADE IDOSO                          |");
-                                printf("\n|Assento: %d                                                  |", assent2);
-                                printf("\n--------------------------------------------------------------");
+                                printf("\nOnibus 2 - Guanambi BA para Belo Horizonte MG");
+                                printf("\nValor: GRATIS");
+                                printf("\nAssento: Preferencial");
+                                printf("\nTipo de Passagem: GRATUIDADE IDOSO");
+                                printf("\n");
                                 printf("\nDigite 1 para imprimir passagem e voltar ao menu principal: ");
                                 scanf("%d", &op);
                                 gratuidade2 ++;
